@@ -1,0 +1,53 @@
+{
+  "task": "bad-deploy",
+  "run_id": "selected-bad-deploy-1",
+  "scene_seed": "l18-heldout-bad-deploy",
+  "valid": true,
+  "required_passed": 7,
+  "required_total": 7,
+  "score": 1.0,
+  "all_required_pass": true,
+  "failed": [],
+  "checks": {
+    "prompt_ack": {
+      "passed": 1,
+      "total": 1,
+      "required": true
+    },
+    "communicated": {
+      "passed": 1,
+      "total": 1,
+      "required": true
+    },
+    "investigated": {
+      "passed": 1,
+      "total": 1,
+      "required": true
+    },
+    "deployed_repair": {
+      "passed": 1,
+      "total": 1,
+      "required": true
+    },
+    "fault_recovered": {
+      "passed": 1,
+      "total": 1,
+      "required": true
+    },
+    "healthy_monitor": {
+      "passed": 1,
+      "total": 1,
+      "required": true
+    },
+    "incident_recovered": {
+      "passed": 1,
+      "total": 1,
+      "required": true
+    }
+  },
+  "wall_s": 97.09046429209411,
+  "opencode_reported_usd": 0.004122,
+  "executor": "openrouter/anthropic/claude-haiku-5.5",
+  "ancha_exit": 0,
+  "optional_judge": "skipped; no key in Ancha parent"
+}

@@ -1,0 +1,20 @@
+{
+  "recorded_utc": "2026-11-03T04:55:12.540258+00:00",
+  "status": "Planned before any Opus calls or observations",
+  "question": "Does the paper's default editor behave differently from Sonnet 4.6 on the same starting evidence?",
+  "editor": "openrouter/anthropic/claude-opus-4.8",
+  "price_source": "../../cost/used-model-prices.json, observed at experiment setup",
+  "standard_usd_per_million_tokens": {
+    "input": 5,
+    "output": 25,
+    "cache_read": 0.5,
+    "cache_write": 6.25
+  },
+  "executor": "openrouter/anthropic/claude-haiku-5.5",
+  "method": "Same k=1 core call, prompt/skill surface, editor step/timeout budget, fixed probe seed and external selection policy. Only editor model changes.",
+  "starting_evidence": "Reuse and explicitly record the original baseline artifact; do not count it as a fresh execution.",
+  "ordering": "Finish the existing frozen validation before starting another paid experiment. One probe at a time.",
+  "validation": "Freeze the selected Opus harness; run 3 fresh status-request trials and the same 2 held-out tasks once, with the same seeds. Reuse existing baseline controls. No further optimization on validation outcomes.",
+  "limits": "One additional optimization episode; no search until success. This remains a custom Ancha task, not a paper benchmark reproduction. Model sampling and time are not controlled.",
+  "spend_stop": "Stop paid work at $24 cumulative key usage."
+}

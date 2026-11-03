@@ -1,0 +1,8 @@
+{
+  "successful_optimization_after_cached_baseline_wall_s": 971.562871250324,
+  "baseline_wall_s": 220.71522962581366,
+  "serial_workflow_wall_s": 1192.2781008761376,
+  "serial_workflow_minutes": 19.87130168126896,
+  "excluded": "Two failed editor launchers, smoke tests, package setup, authoring/research time and frozen validation.",
+  "formula": "baseline score.wall_s + optimize-timing.wall_s; optimization reused the same baseline artifact."
+}

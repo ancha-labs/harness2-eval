@@ -1,0 +1,64 @@
+{
+  "task": "status-request",
+  "run_id": "probe-status-request-dom1",
+  "scene_seed": "l18-fixed",
+  "valid": true,
+  "required_passed": 3,
+  "required_total": 8,
+  "score": 0.375,
+  "all_required_pass": false,
+  "failed": [
+    "investigated",
+    "deployed_repair",
+    "fault_recovered",
+    "healthy_monitor",
+    "incident_recovered"
+  ],
+  "checks": {
+    "prompt_ack": {
+      "passed": 1,
+      "total": 1,
+      "required": true
+    },
+    "communicated": {
+      "passed": 1,
+      "total": 1,
+      "required": true
+    },
+    "investigated": {
+      "passed": 0,
+      "total": 1,
+      "required": true
+    },
+    "deployed_repair": {
+      "passed": 0,
+      "total": 1,
+      "required": true
+    },
+    "fault_recovered": {
+      "passed": 0,
+      "total": 1,
+      "required": true
+    },
+    "healthy_monitor": {
+      "passed": 0,
+      "total": 1,
+      "required": true
+    },
+    "incident_recovered": {
+      "passed": 0,
+      "total": 1,
+      "required": true
+    },
+    "answered_request_thread": {
+      "passed": 1,
+      "total": 1,
+      "required": true
+    }
+  },
+  "wall_s": 188.22336425073445,
+  "opencode_reported_usd": 0.006605,
+  "executor": "openrouter/anthropic/claude-haiku-5.5",
+  "ancha_exit": 1,
+  "optional_judge": "skipped; no key in Ancha parent"
+}

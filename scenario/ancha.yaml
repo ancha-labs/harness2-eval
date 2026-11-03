@@ -1,0 +1,6 @@
+agent:
+  command: node agent.ts
+scenes: [scenes/**/scene.yaml]
+trials: 1
+parallel: 1
+min_pass_rate: 1

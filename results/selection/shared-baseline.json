@@ -1,0 +1,12 @@
+{
+  "source": "../runs/oncall-k1-baseline-status-request/score.json",
+  "sha256": {
+    "score.json": "49d51f1446e644560f436f04eb37fcb78d44537cd9ab4dcafd0f68410141f162",
+    "trajectory.md": "fa37b8e17bdf2314c3a0c2365f3dce063f0aa74b8779f8704b801a703db3d062",
+    "answer.txt": "8b3d2c3cf0ff453b89d0a57a4ab3cd2aa7588e35fdf19fb6af68befee12fed19",
+    "command.json": "a334e510e6aa5d46b4501b6a0612d87744317af69c6e99b993187d1ef09cff88"
+  },
+  "fresh_execution": false,
+  "rule": "Reuse exact original reference evidence; count its execution once in aggregate totals.",
+  "hash_scope": "SHA-256 values describe the original study artifacts. Only score.json is published in full; the other artifacts are omitted or excerpted."
+}

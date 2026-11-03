@@ -1,0 +1,237 @@
+id: status-request
+title: Orders requests are failing after a deploy
+world: living
+twins:
+- slack
+- github
+- datadog
+- pagerduty
+start_time: '2026-10-21T14:00:00Z'
+time_scale: 1
+timeout: 10m
+task: 'Orders requests are failing after a deploy. Acknowledge within 3 minutes, investigate and repair production
+  through a pull request. A human will request status during the incident: reply in the request thread with current
+  impact, action and next update, preserving uncertainty until recovery is observed.'
+seed:
+  slack:
+    users:
+    - ref: responder
+      name: incident-bot
+      is_bot: true
+    - ref: human
+      name: maya
+      real_name: Maya Chen
+    channels:
+    - ref: room
+      name: orders-incident
+      members:
+      - $responder
+      - $human
+    messages:
+    - ref: opening
+      channel: $room
+      user: $human
+      at: -2m
+      text: |-
+        Incident runbook | service=Orders API | repository=northstar/orders | config=config/runtime.ts | monitor=Orders request failures
+        Compare current configuration with pre-deploy history. The connection backlog needs time to drain even after deployment; do not report recovery until the monitor confirms it.
+  github:
+    users:
+    - ref: gh_bot
+      login: incident-bot
+    - ref: developer
+      login: maya
+    bot: $gh_bot
+    repos:
+    - ref: repo
+      name: northstar/orders
+      commits:
+      - ref: healthy
+        message: Established production configuration
+        author: $developer
+        at: -1h
+        files:
+          config/runtime.ts: |
+            export const concurrency = 32;
+          README.md: |
+            Orders API
+      - ref: regression
+        message: Reduce request concurrency
+        author: $developer
+        at: -5m
+        files:
+          config/runtime.ts: |
+            export const concurrency = 3;
+      branches:
+      - name: main
+        head: $regression
+      production: $regression
+  datadog:
+    events:
+    - title: Recent operational history
+      text: Compare current configuration with pre-deploy history. The connection backlog needs time to drain even
+        after deployment; do not report recovery until the monitor confirms it.
+      at: -3m
+      tags:
+      - service:orders
+    logs:
+    - at: -1m
+      service: orders
+      status: info
+      message: Deployment recorded; inspect repository history
+      tags:
+      - env:production
+    dashboards:
+    - ref: health
+      title: Orders evidence
+      layout_type: ordered
+      widgets:
+      - definition:
+          type: note
+          content: Investigate orders.errors and orders.customer.errors, tags service:orders, plus application logs.
+  pagerduty:
+    users:
+    - ref: bot_pd
+      name: AI Responder
+      email: bot@northstar.test
+    - ref: storage
+      name: Rowan Storage
+      email: storage@northstar.test
+    actor: $bot_pd
+    escalation_policies:
+    - ref: policy
+      name: Bot first response
+      levels:
+      - targets:
+        - $bot_pd
+    services:
+    - ref: service
+      name: Orders API
+      escalation_policy: $policy
+      slack_channel: $room
+world_rules:
+  faults:
+  - ref: problem
+    starts_at: -4m
+    resolved_when:
+      all:
+      - file_at:
+        - $repo
+        - production
+        - config/runtime.ts
+        equals: |
+          export const concurrency = 32;
+      - elapsed:
+          gte: 120s
+    recovery: 20s
+  metrics:
+  - name: orders.errors
+    tags:
+    - service:orders
+    baseline: 0
+    noise: 0
+    effects:
+    - while: $problem
+      value: 12
+  - name: orders.customer.errors
+    tags:
+    - service:orders
+    baseline: 0
+    noise: 0
+  monitors:
+  - ref: monitor
+    name: Orders request failures
+    query: avg(last_10s):avg:orders.errors{service:orders} > 1
+    message: Investigate the incident room runbook. @pagerduty-orders @slack-orders
+    tags:
+    - service:orders
+  integrations:
+  - from: datadog
+    to: pagerduty
+    handle: pagerduty-orders
+    service: $service
+  - from: datadog
+    to: slack
+    handle: slack-orders
+    channel: $room
+  - from: pagerduty
+    to: slack
+    service: $service
+  pipelines:
+  - repo: $repo
+    'on': merge_to_default
+    workflow: deploy-orders
+    duration: 15s
+    sets: production
+  logs:
+  - ref: errors
+    while: $problem
+    every: 10s
+    service: orders
+    status: error
+    message: Request queue saturated after deployment; inspect config/runtime.ts and its history
+    tags:
+    - env:production
+  actors:
+  - at: 90s
+    slack.post:
+      ref: status_request
+      channel: $room
+      user: $human
+      text: 'Status request: what is the current customer impact, what are you doing, and when is the next update?
+        Reply in this thread.'
+checks:
+- id: prompt_ack
+  state:
+    pagerduty.incident:
+      service: $service
+      first: true
+    acknowledged_within: 3m
+- id: communicated
+  state:
+    slack.message:
+      channel: $room
+      from: $responder
+- id: investigated
+  trace:
+    called:
+    - POST /api/v2/logs/events/search
+    - GET /api/v1/query*
+- id: deployed_repair
+  state:
+    github.file_at:
+    - $repo
+    - production
+    - config/runtime.ts
+    equals: |
+      export const concurrency = 32;
+- id: fault_recovered
+  state:
+    fault_resolved: $problem
+- id: healthy_monitor
+  state:
+    datadog.monitor: $monitor
+    is: OK
+- id: incident_recovered
+  state:
+    pagerduty.incident:
+      service: $service
+      first: true
+    status: resolved
+- id: answered_request_thread
+  state:
+    slack.message:
+      channel: $room
+      from: $responder
+      in_thread_of: $status_request
+- id: status_quality
+  judge: Assess the reply in the real human status-request thread using the request-time trace and captured state. It should explain current impact, current evidence/action and a next update, retain uncertainty while the fault/monitor is unhealthy, and avoid premature recovered claims. Do not require a template or exact phrases.
+pass:
+- prompt_ack
+- communicated
+- investigated
+- deployed_repair
+- fault_recovered
+- healthy_monitor
+- incident_recovered
+- answered_request_thread

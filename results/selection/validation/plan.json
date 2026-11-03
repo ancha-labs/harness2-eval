@@ -1,0 +1,86 @@
+{
+  "frozen_selected_files": {
+    "systemprompt.md": "7c64a192baaf5ab8fc244d652f1f3dac5bcea19ca7e6b6c9b3b64af3faa9583e",
+    "guardrails.md": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "LongTermMEMORY.md": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "plugin/README.md": "c606f4532a4d0d14722d6bfedb8e99b565bab7fa3938aea93b31e676401b1d2c",
+    "scripts/README.md": "a511a671ae2d8097770dce7bbb7c8db16e17bd8dd0b19b199ed095a7f7e8b3f5",
+    "skills/README.md": "7e65676563cda9317c8859d72e4c026767eb5df15364914902591e642d264f00",
+    "sub_agents/README.md": "b55bc908c5453d85fbed363b5b23872d21dd9a12b580c2005c095b567cbd2a40",
+    "tool_descriptions/tool_guidance.md": "1fdd48a6ecd1a2dbfe192a2bbc7c5935ac410a2c2d42ffb1f1badbf280babcd0",
+    "skills/status-reply/SKILL.md": "6823e9080f988d6df714d16b832511a4b9fcc5e48bc08bf79bada2ffd52fcc3a"
+  },
+  "plan": [
+    {
+      "task": "status-request",
+      "repeat": 1,
+      "version": "base",
+      "seed": "l18-fixed",
+      "role": "fresh-repeat-on-development-task"
+    },
+    {
+      "task": "status-request",
+      "repeat": 1,
+      "version": "selected",
+      "seed": "l18-fixed",
+      "role": "fresh-repeat-on-development-task"
+    },
+    {
+      "task": "status-request",
+      "repeat": 2,
+      "version": "selected",
+      "seed": "l18-fixed",
+      "role": "fresh-repeat-on-development-task"
+    },
+    {
+      "task": "status-request",
+      "repeat": 2,
+      "version": "base",
+      "seed": "l18-fixed",
+      "role": "fresh-repeat-on-development-task"
+    },
+    {
+      "task": "status-request",
+      "repeat": 3,
+      "version": "base",
+      "seed": "l18-fixed",
+      "role": "fresh-repeat-on-development-task"
+    },
+    {
+      "task": "status-request",
+      "repeat": 3,
+      "version": "selected",
+      "seed": "l18-fixed",
+      "role": "fresh-repeat-on-development-task"
+    },
+    {
+      "task": "bad-deploy",
+      "repeat": 1,
+      "version": "base",
+      "seed": "l18-heldout-bad-deploy",
+      "role": "held-out-task with new IDs; no edits or selection use this result"
+    },
+    {
+      "task": "bad-deploy",
+      "repeat": 1,
+      "version": "selected",
+      "seed": "l18-heldout-bad-deploy",
+      "role": "held-out-task with new IDs; no edits or selection use this result"
+    },
+    {
+      "task": "false-alarm",
+      "repeat": 1,
+      "version": "base",
+      "seed": "l18-heldout-false-alarm",
+      "role": "held-out-task with new IDs; no edits or selection use this result"
+    },
+    {
+      "task": "false-alarm",
+      "repeat": 1,
+      "version": "selected",
+      "seed": "l18-heldout-false-alarm",
+      "role": "held-out-task with new IDs; no edits or selection use this result"
+    }
+  ],
+  "policy": "No edits or model optimization during validation. All runs use fresh worlds and serial execution."
+}

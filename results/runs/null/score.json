@@ -1,0 +1,65 @@
+{
+  "task": "status-request",
+  "run_id": "null",
+  "valid": true,
+  "required_passed": 0,
+  "required_total": 8,
+  "score": 0.0,
+  "all_required_pass": false,
+  "failed": [
+    "prompt_ack",
+    "communicated",
+    "investigated",
+    "deployed_repair",
+    "fault_recovered",
+    "healthy_monitor",
+    "incident_recovered",
+    "answered_request_thread"
+  ],
+  "checks": {
+    "prompt_ack": {
+      "passed": 0,
+      "total": 1,
+      "required": true
+    },
+    "communicated": {
+      "passed": 0,
+      "total": 1,
+      "required": true
+    },
+    "investigated": {
+      "passed": 0,
+      "total": 1,
+      "required": true
+    },
+    "deployed_repair": {
+      "passed": 0,
+      "total": 1,
+      "required": true
+    },
+    "fault_recovered": {
+      "passed": 0,
+      "total": 1,
+      "required": true
+    },
+    "healthy_monitor": {
+      "passed": 0,
+      "total": 1,
+      "required": true
+    },
+    "incident_recovered": {
+      "passed": 0,
+      "total": 1,
+      "required": true
+    },
+    "answered_request_thread": {
+      "passed": 0,
+      "total": 1,
+      "required": true
+    }
+  },
+  "startedAt": "2026-11-03T04:13:33.977Z",
+  "finishedAt": "2026-11-03T04:13:34.079Z",
+  "optional_judge": "skipped; no key in Ancha parent",
+  "provenance": "Required-check fields extracted from the recorded Ancha control summary; no model executor."
+}

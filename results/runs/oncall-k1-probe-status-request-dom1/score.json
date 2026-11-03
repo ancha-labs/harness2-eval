@@ -1,0 +1,59 @@
+{
+  "task": "status-request",
+  "run_id": "probe-status-request-dom1",
+  "valid": true,
+  "required_passed": 7,
+  "required_total": 8,
+  "score": 0.875,
+  "all_required_pass": false,
+  "failed": [
+    "answered_request_thread"
+  ],
+  "checks": {
+    "prompt_ack": {
+      "passed": 1,
+      "total": 1,
+      "required": true
+    },
+    "communicated": {
+      "passed": 1,
+      "total": 1,
+      "required": true
+    },
+    "investigated": {
+      "passed": 1,
+      "total": 1,
+      "required": true
+    },
+    "deployed_repair": {
+      "passed": 1,
+      "total": 1,
+      "required": true
+    },
+    "fault_recovered": {
+      "passed": 1,
+      "total": 1,
+      "required": true
+    },
+    "healthy_monitor": {
+      "passed": 1,
+      "total": 1,
+      "required": true
+    },
+    "incident_recovered": {
+      "passed": 1,
+      "total": 1,
+      "required": true
+    },
+    "answered_request_thread": {
+      "passed": 0,
+      "total": 1,
+      "required": true
+    }
+  },
+  "wall_s": 204.19481662474573,
+  "opencode_reported_usd": 0.004541,
+  "executor": "openrouter/anthropic/claude-haiku-5.5",
+  "ancha_exit": 1,
+  "optional_judge": "skipped; no key in Ancha parent"
+}

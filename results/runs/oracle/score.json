@@ -1,0 +1,56 @@
+{
+  "task": "status-request",
+  "run_id": "oracle",
+  "valid": true,
+  "required_passed": 8,
+  "required_total": 8,
+  "score": 1.0,
+  "all_required_pass": true,
+  "failed": [],
+  "checks": {
+    "prompt_ack": {
+      "passed": 1,
+      "total": 1,
+      "required": true
+    },
+    "communicated": {
+      "passed": 1,
+      "total": 1,
+      "required": true
+    },
+    "investigated": {
+      "passed": 1,
+      "total": 1,
+      "required": true
+    },
+    "deployed_repair": {
+      "passed": 1,
+      "total": 1,
+      "required": true
+    },
+    "fault_recovered": {
+      "passed": 1,
+      "total": 1,
+      "required": true
+    },
+    "healthy_monitor": {
+      "passed": 1,
+      "total": 1,
+      "required": true
+    },
+    "incident_recovered": {
+      "passed": 1,
+      "total": 1,
+      "required": true
+    },
+    "answered_request_thread": {
+      "passed": 1,
+      "total": 1,
+      "required": true
+    }
+  },
+  "startedAt": "2026-11-03T04:13:59.822Z",
+  "finishedAt": "2026-11-03T04:16:30.099Z",
+  "optional_judge": "skipped; no key in Ancha parent",
+  "provenance": "Required-check fields extracted from the recorded Ancha control summary; no model executor."
+}

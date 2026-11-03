@@ -1,0 +1,7 @@
+{
+  "unique_model_backed_world_runs": 22,
+  "shared_baseline_counted_once": true,
+  "invalid_trials": 0,
+  "controls_additional": 2,
+  "note": "The ungraded world-up connection smoke is separate, was removed, and is not counted as a model-backed run."
+}

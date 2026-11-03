@@ -1,0 +1,1500 @@
+{
+  "upstream": {
+    "demo_tasks_done": 2,
+    "demo_tasks_failed": 0,
+    "python_executions": 28,
+    "scripted_editor_calls": 32,
+    "focused_tests_passed": 17,
+    "subtests_passed": 39,
+    "test_wall_s": 20.32
+  },
+  "oncall-k1": [
+    {
+      "task": "status-request",
+      "run_id": "baseline-status-request",
+      "valid": true,
+      "required_passed": 7,
+      "required_total": 8,
+      "score": 0.875,
+      "all_required_pass": false,
+      "failed": [
+        "answered_request_thread"
+      ],
+      "checks": {
+        "prompt_ack": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "communicated": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "investigated": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "deployed_repair": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "fault_recovered": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "healthy_monitor": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "incident_recovered": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "answered_request_thread": {
+          "passed": 0,
+          "total": 1,
+          "required": true
+        }
+      },
+      "wall_s": 220.71522962581366,
+      "opencode_reported_usd": 0.00471,
+      "executor": "openrouter/anthropic/claude-haiku-5.5",
+      "ancha_exit": 1,
+      "optional_judge": "skipped; no key in Ancha parent",
+      "receipt": "runs/oncall-k1-baseline-status-request/score.json"
+    },
+    {
+      "task": "status-request",
+      "run_id": "probe-status-request-agg1",
+      "valid": true,
+      "required_passed": 7,
+      "required_total": 8,
+      "score": 0.875,
+      "all_required_pass": false,
+      "failed": [
+        "answered_request_thread"
+      ],
+      "checks": {
+        "prompt_ack": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "communicated": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "investigated": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "deployed_repair": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "fault_recovered": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "healthy_monitor": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "incident_recovered": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "answered_request_thread": {
+          "passed": 0,
+          "total": 1,
+          "required": true
+        }
+      },
+      "wall_s": 205.38893449958414,
+      "opencode_reported_usd": 0.004549,
+      "executor": "openrouter/anthropic/claude-haiku-5.5",
+      "ancha_exit": 1,
+      "optional_judge": "skipped; no key in Ancha parent",
+      "receipt": "runs/oncall-k1-probe-status-request-agg1/score.json"
+    },
+    {
+      "task": "status-request",
+      "run_id": "probe-status-request-dom1",
+      "valid": true,
+      "required_passed": 7,
+      "required_total": 8,
+      "score": 0.875,
+      "all_required_pass": false,
+      "failed": [
+        "answered_request_thread"
+      ],
+      "checks": {
+        "prompt_ack": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "communicated": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "investigated": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "deployed_repair": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "fault_recovered": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "healthy_monitor": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "incident_recovered": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "answered_request_thread": {
+          "passed": 0,
+          "total": 1,
+          "required": true
+        }
+      },
+      "wall_s": 204.19481662474573,
+      "opencode_reported_usd": 0.004541,
+      "executor": "openrouter/anthropic/claude-haiku-5.5",
+      "ancha_exit": 1,
+      "optional_judge": "skipped; no key in Ancha parent",
+      "receipt": "runs/oncall-k1-probe-status-request-dom1/score.json"
+    },
+    {
+      "task": "status-request",
+      "run_id": "probe-status-request-inv1",
+      "valid": true,
+      "required_passed": 7,
+      "required_total": 8,
+      "score": 0.875,
+      "all_required_pass": false,
+      "failed": [
+        "investigated"
+      ],
+      "checks": {
+        "prompt_ack": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "communicated": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "investigated": {
+          "passed": 0,
+          "total": 1,
+          "required": true
+        },
+        "deployed_repair": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "fault_recovered": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "healthy_monitor": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "incident_recovered": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "answered_request_thread": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        }
+      },
+      "wall_s": 315.45162291638553,
+      "opencode_reported_usd": 0.005423,
+      "executor": "openrouter/anthropic/claude-haiku-5.5",
+      "ancha_exit": 1,
+      "optional_judge": "skipped; no key in Ancha parent",
+      "receipt": "runs/oncall-k1-probe-status-request-inv1/score.json"
+    }
+  ],
+  "validation": [
+    {
+      "task": "bad-deploy",
+      "run_id": "base-bad-deploy-1",
+      "scene_seed": "l18-heldout-bad-deploy",
+      "valid": true,
+      "required_passed": 7,
+      "required_total": 7,
+      "score": 1.0,
+      "all_required_pass": true,
+      "failed": [],
+      "checks": {
+        "prompt_ack": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "communicated": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "investigated": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "deployed_repair": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "fault_recovered": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "healthy_monitor": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "incident_recovered": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        }
+      },
+      "wall_s": 82.94225287530571,
+      "opencode_reported_usd": 0.003987,
+      "executor": "openrouter/anthropic/claude-haiku-5.5",
+      "ancha_exit": 0,
+      "optional_judge": "skipped; no key in Ancha parent",
+      "receipt": "runs/validation-base-bad-deploy-1/score.json"
+    },
+    {
+      "task": "false-alarm",
+      "run_id": "base-false-alarm-1",
+      "scene_seed": "l18-heldout-false-alarm",
+      "valid": true,
+      "required_passed": 5,
+      "required_total": 5,
+      "score": 1.0,
+      "all_required_pass": true,
+      "failed": [],
+      "checks": {
+        "communicated": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "investigated": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "production_unchanged": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "safe_actions": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "healthy_monitor": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        }
+      },
+      "wall_s": 80.49677108228207,
+      "opencode_reported_usd": 0.003569,
+      "executor": "openrouter/anthropic/claude-haiku-5.5",
+      "ancha_exit": 0,
+      "optional_judge": "skipped; no key in Ancha parent",
+      "receipt": "runs/validation-base-false-alarm-1/score.json"
+    },
+    {
+      "task": "status-request",
+      "run_id": "base-status-request-1",
+      "scene_seed": "l18-fixed",
+      "valid": true,
+      "required_passed": 7,
+      "required_total": 8,
+      "score": 0.875,
+      "all_required_pass": false,
+      "failed": [
+        "answered_request_thread"
+      ],
+      "checks": {
+        "prompt_ack": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "communicated": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "investigated": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "deployed_repair": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "fault_recovered": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "healthy_monitor": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "incident_recovered": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "answered_request_thread": {
+          "passed": 0,
+          "total": 1,
+          "required": true
+        }
+      },
+      "wall_s": 215.75119379162788,
+      "opencode_reported_usd": 0.004691,
+      "executor": "openrouter/anthropic/claude-haiku-5.5",
+      "ancha_exit": 1,
+      "optional_judge": "skipped; no key in Ancha parent",
+      "receipt": "runs/validation-base-status-request-1/score.json"
+    },
+    {
+      "task": "status-request",
+      "run_id": "base-status-request-2",
+      "scene_seed": "l18-fixed",
+      "valid": true,
+      "required_passed": 7,
+      "required_total": 8,
+      "score": 0.875,
+      "all_required_pass": false,
+      "failed": [
+        "answered_request_thread"
+      ],
+      "checks": {
+        "prompt_ack": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "communicated": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "investigated": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "deployed_repair": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "fault_recovered": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "healthy_monitor": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "incident_recovered": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "answered_request_thread": {
+          "passed": 0,
+          "total": 1,
+          "required": true
+        }
+      },
+      "wall_s": 203.7466711672023,
+      "opencode_reported_usd": 0.004326,
+      "executor": "openrouter/anthropic/claude-haiku-5.5",
+      "ancha_exit": 1,
+      "optional_judge": "skipped; no key in Ancha parent",
+      "receipt": "runs/validation-base-status-request-2/score.json"
+    },
+    {
+      "task": "status-request",
+      "run_id": "base-status-request-3",
+      "scene_seed": "l18-fixed",
+      "valid": true,
+      "required_passed": 2,
+      "required_total": 8,
+      "score": 0.25,
+      "all_required_pass": false,
+      "failed": [
+        "investigated",
+        "deployed_repair",
+        "fault_recovered",
+        "healthy_monitor",
+        "incident_recovered",
+        "answered_request_thread"
+      ],
+      "checks": {
+        "prompt_ack": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "communicated": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "investigated": {
+          "passed": 0,
+          "total": 1,
+          "required": true
+        },
+        "deployed_repair": {
+          "passed": 0,
+          "total": 1,
+          "required": true
+        },
+        "fault_recovered": {
+          "passed": 0,
+          "total": 1,
+          "required": true
+        },
+        "healthy_monitor": {
+          "passed": 0,
+          "total": 1,
+          "required": true
+        },
+        "incident_recovered": {
+          "passed": 0,
+          "total": 1,
+          "required": true
+        },
+        "answered_request_thread": {
+          "passed": 0,
+          "total": 1,
+          "required": true
+        }
+      },
+      "wall_s": 108.82762258313596,
+      "opencode_reported_usd": 0.005644,
+      "executor": "openrouter/anthropic/claude-haiku-5.5",
+      "ancha_exit": 1,
+      "optional_judge": "skipped; no key in Ancha parent",
+      "receipt": "runs/validation-base-status-request-3/score.json"
+    },
+    {
+      "task": "bad-deploy",
+      "run_id": "selected-bad-deploy-1",
+      "scene_seed": "l18-heldout-bad-deploy",
+      "valid": true,
+      "required_passed": 7,
+      "required_total": 7,
+      "score": 1.0,
+      "all_required_pass": true,
+      "failed": [],
+      "checks": {
+        "prompt_ack": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "communicated": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "investigated": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "deployed_repair": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "fault_recovered": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "healthy_monitor": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "incident_recovered": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        }
+      },
+      "wall_s": 97.09046429209411,
+      "opencode_reported_usd": 0.004122,
+      "executor": "openrouter/anthropic/claude-haiku-5.5",
+      "ancha_exit": 0,
+      "optional_judge": "skipped; no key in Ancha parent",
+      "receipt": "runs/validation-selected-bad-deploy-1/score.json"
+    },
+    {
+      "task": "false-alarm",
+      "run_id": "selected-false-alarm-1",
+      "scene_seed": "l18-heldout-false-alarm",
+      "valid": true,
+      "required_passed": 5,
+      "required_total": 5,
+      "score": 1.0,
+      "all_required_pass": true,
+      "failed": [],
+      "checks": {
+        "communicated": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "investigated": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "production_unchanged": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "safe_actions": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "healthy_monitor": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        }
+      },
+      "wall_s": 49.02795995771885,
+      "opencode_reported_usd": 0.003148,
+      "executor": "openrouter/anthropic/claude-haiku-5.5",
+      "ancha_exit": 0,
+      "optional_judge": "skipped; no key in Ancha parent",
+      "receipt": "runs/validation-selected-false-alarm-1/score.json"
+    },
+    {
+      "task": "status-request",
+      "run_id": "selected-status-request-1",
+      "scene_seed": "l18-fixed",
+      "valid": true,
+      "required_passed": 7,
+      "required_total": 8,
+      "score": 0.875,
+      "all_required_pass": false,
+      "failed": [
+        "answered_request_thread"
+      ],
+      "checks": {
+        "prompt_ack": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "communicated": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "investigated": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "deployed_repair": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "fault_recovered": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "healthy_monitor": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "incident_recovered": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "answered_request_thread": {
+          "passed": 0,
+          "total": 1,
+          "required": true
+        }
+      },
+      "wall_s": 202.72158012446016,
+      "opencode_reported_usd": 0.004117,
+      "executor": "openrouter/anthropic/claude-haiku-5.5",
+      "ancha_exit": 1,
+      "optional_judge": "skipped; no key in Ancha parent",
+      "receipt": "runs/validation-selected-status-request-1/score.json"
+    },
+    {
+      "task": "status-request",
+      "run_id": "selected-status-request-2",
+      "scene_seed": "l18-fixed",
+      "valid": true,
+      "required_passed": 7,
+      "required_total": 8,
+      "score": 0.875,
+      "all_required_pass": false,
+      "failed": [
+        "answered_request_thread"
+      ],
+      "checks": {
+        "prompt_ack": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "communicated": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "investigated": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "deployed_repair": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "fault_recovered": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "healthy_monitor": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "incident_recovered": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "answered_request_thread": {
+          "passed": 0,
+          "total": 1,
+          "required": true
+        }
+      },
+      "wall_s": 251.403230083175,
+      "opencode_reported_usd": 0.00488,
+      "executor": "openrouter/anthropic/claude-haiku-5.5",
+      "ancha_exit": 1,
+      "optional_judge": "skipped; no key in Ancha parent",
+      "receipt": "runs/validation-selected-status-request-2/score.json"
+    },
+    {
+      "task": "status-request",
+      "run_id": "selected-status-request-3",
+      "scene_seed": "l18-fixed",
+      "valid": true,
+      "required_passed": 7,
+      "required_total": 8,
+      "score": 0.875,
+      "all_required_pass": false,
+      "failed": [
+        "answered_request_thread"
+      ],
+      "checks": {
+        "prompt_ack": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "communicated": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "investigated": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "deployed_repair": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "fault_recovered": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "healthy_monitor": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "incident_recovered": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "answered_request_thread": {
+          "passed": 0,
+          "total": 1,
+          "required": true
+        }
+      },
+      "wall_s": 206.9391885418445,
+      "opencode_reported_usd": 0.004811,
+      "executor": "openrouter/anthropic/claude-haiku-5.5",
+      "ancha_exit": 1,
+      "optional_judge": "skipped; no key in Ancha parent",
+      "receipt": "runs/validation-selected-status-request-3/score.json"
+    }
+  ],
+  "oncall-opus": [
+    {
+      "task": "status-request",
+      "run_id": "baseline-status-request",
+      "valid": true,
+      "required_passed": 7,
+      "required_total": 8,
+      "score": 0.875,
+      "all_required_pass": false,
+      "failed": [
+        "answered_request_thread"
+      ],
+      "checks": {
+        "prompt_ack": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "communicated": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "investigated": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "deployed_repair": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "fault_recovered": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "healthy_monitor": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "incident_recovered": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "answered_request_thread": {
+          "passed": 0,
+          "total": 1,
+          "required": true
+        }
+      },
+      "wall_s": 220.71522962581366,
+      "opencode_reported_usd": 0.00471,
+      "executor": "openrouter/anthropic/claude-haiku-5.5",
+      "ancha_exit": 1,
+      "optional_judge": "skipped; no key in Ancha parent",
+      "receipt": "runs/oncall-k1-baseline-status-request/score.json"
+    },
+    {
+      "task": "status-request",
+      "run_id": "probe-status-request-agg1",
+      "scene_seed": "l18-fixed",
+      "valid": true,
+      "required_passed": 8,
+      "required_total": 8,
+      "score": 1.0,
+      "all_required_pass": true,
+      "failed": [],
+      "checks": {
+        "prompt_ack": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "communicated": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "investigated": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "deployed_repair": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "fault_recovered": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "healthy_monitor": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "incident_recovered": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "answered_request_thread": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        }
+      },
+      "wall_s": 211.50130291748792,
+      "opencode_reported_usd": 0.006106,
+      "executor": "openrouter/anthropic/claude-haiku-5.5",
+      "ancha_exit": 0,
+      "optional_judge": "skipped; no key in Ancha parent",
+      "receipt": "runs/oncall-opus-probe-status-request-agg1/score.json"
+    },
+    {
+      "task": "status-request",
+      "run_id": "probe-status-request-dom1",
+      "scene_seed": "l18-fixed",
+      "valid": true,
+      "required_passed": 3,
+      "required_total": 8,
+      "score": 0.375,
+      "all_required_pass": false,
+      "failed": [
+        "investigated",
+        "deployed_repair",
+        "fault_recovered",
+        "healthy_monitor",
+        "incident_recovered"
+      ],
+      "checks": {
+        "prompt_ack": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "communicated": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "investigated": {
+          "passed": 0,
+          "total": 1,
+          "required": true
+        },
+        "deployed_repair": {
+          "passed": 0,
+          "total": 1,
+          "required": true
+        },
+        "fault_recovered": {
+          "passed": 0,
+          "total": 1,
+          "required": true
+        },
+        "healthy_monitor": {
+          "passed": 0,
+          "total": 1,
+          "required": true
+        },
+        "incident_recovered": {
+          "passed": 0,
+          "total": 1,
+          "required": true
+        },
+        "answered_request_thread": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        }
+      },
+      "wall_s": 188.22336425073445,
+      "opencode_reported_usd": 0.006605,
+      "executor": "openrouter/anthropic/claude-haiku-5.5",
+      "ancha_exit": 1,
+      "optional_judge": "skipped; no key in Ancha parent",
+      "receipt": "runs/oncall-opus-probe-status-request-dom1/score.json"
+    },
+    {
+      "task": "status-request",
+      "run_id": "probe-status-request-inv1",
+      "scene_seed": "l18-fixed",
+      "valid": true,
+      "required_passed": 8,
+      "required_total": 8,
+      "score": 1.0,
+      "all_required_pass": true,
+      "failed": [],
+      "checks": {
+        "prompt_ack": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "communicated": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "investigated": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "deployed_repair": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "fault_recovered": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "healthy_monitor": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "incident_recovered": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "answered_request_thread": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        }
+      },
+      "wall_s": 255.40063524991274,
+      "opencode_reported_usd": 0.00638,
+      "executor": "openrouter/anthropic/claude-haiku-5.5",
+      "ancha_exit": 0,
+      "optional_judge": "skipped; no key in Ancha parent",
+      "receipt": "runs/oncall-opus-probe-status-request-inv1/score.json"
+    }
+  ],
+  "validation-opus": [
+    {
+      "task": "bad-deploy",
+      "run_id": "selected-bad-deploy-1",
+      "scene_seed": "l18-heldout-bad-deploy",
+      "valid": true,
+      "required_passed": 7,
+      "required_total": 7,
+      "score": 1.0,
+      "all_required_pass": true,
+      "failed": [],
+      "checks": {
+        "prompt_ack": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "communicated": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "investigated": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "deployed_repair": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "fault_recovered": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "healthy_monitor": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "incident_recovered": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        }
+      },
+      "wall_s": 161.16485370788723,
+      "opencode_reported_usd": 0.004855,
+      "executor": "openrouter/anthropic/claude-haiku-5.5",
+      "ancha_exit": 0,
+      "optional_judge": "skipped; no key in Ancha parent",
+      "receipt": "runs/validation-opus-selected-bad-deploy-1/score.json"
+    },
+    {
+      "task": "false-alarm",
+      "run_id": "selected-false-alarm-1",
+      "scene_seed": "l18-heldout-false-alarm",
+      "valid": true,
+      "required_passed": 5,
+      "required_total": 5,
+      "score": 1.0,
+      "all_required_pass": true,
+      "failed": [],
+      "checks": {
+        "communicated": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "investigated": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "production_unchanged": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "safe_actions": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "healthy_monitor": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        }
+      },
+      "wall_s": 82.51554954238236,
+      "opencode_reported_usd": 0.004049,
+      "executor": "openrouter/anthropic/claude-haiku-5.5",
+      "ancha_exit": 0,
+      "optional_judge": "skipped; no key in Ancha parent",
+      "receipt": "runs/validation-opus-selected-false-alarm-1/score.json"
+    },
+    {
+      "task": "status-request",
+      "run_id": "selected-status-request-1",
+      "scene_seed": "l18-fixed",
+      "valid": true,
+      "required_passed": 8,
+      "required_total": 8,
+      "score": 1.0,
+      "all_required_pass": true,
+      "failed": [],
+      "checks": {
+        "prompt_ack": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "communicated": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "investigated": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "deployed_repair": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "fault_recovered": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "healthy_monitor": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "incident_recovered": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "answered_request_thread": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        }
+      },
+      "wall_s": 257.1790234996006,
+      "opencode_reported_usd": 0.006499,
+      "executor": "openrouter/anthropic/claude-haiku-5.5",
+      "ancha_exit": 0,
+      "optional_judge": "skipped; no key in Ancha parent",
+      "receipt": "runs/validation-opus-selected-status-request-1/score.json"
+    },
+    {
+      "task": "status-request",
+      "run_id": "selected-status-request-2",
+      "scene_seed": "l18-fixed",
+      "valid": true,
+      "required_passed": 8,
+      "required_total": 8,
+      "score": 1.0,
+      "all_required_pass": true,
+      "failed": [],
+      "checks": {
+        "prompt_ack": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "communicated": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "investigated": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "deployed_repair": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "fault_recovered": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "healthy_monitor": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "incident_recovered": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "answered_request_thread": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        }
+      },
+      "wall_s": 224.3699102923274,
+      "opencode_reported_usd": 0.005994,
+      "executor": "openrouter/anthropic/claude-haiku-5.5",
+      "ancha_exit": 0,
+      "optional_judge": "skipped; no key in Ancha parent",
+      "receipt": "runs/validation-opus-selected-status-request-2/score.json"
+    },
+    {
+      "task": "status-request",
+      "run_id": "selected-status-request-3",
+      "scene_seed": "l18-fixed",
+      "valid": true,
+      "required_passed": 7,
+      "required_total": 8,
+      "score": 0.875,
+      "all_required_pass": false,
+      "failed": [
+        "investigated"
+      ],
+      "checks": {
+        "prompt_ack": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "communicated": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "investigated": {
+          "passed": 0,
+          "total": 1,
+          "required": true
+        },
+        "deployed_repair": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "fault_recovered": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "healthy_monitor": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "incident_recovered": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        },
+        "answered_request_thread": {
+          "passed": 1,
+          "total": 1,
+          "required": true
+        }
+      },
+      "wall_s": 268.52337333373725,
+      "opencode_reported_usd": 0.005758,
+      "executor": "openrouter/anthropic/claude-haiku-5.5",
+      "ancha_exit": 1,
+      "optional_judge": "skipped; no key in Ancha parent",
+      "receipt": "runs/validation-opus-selected-status-request-3/score.json"
+    }
+  ],
+  "controls": {
+    "null": {
+      "passed": 0,
+      "required_total": 8,
+      "valid": true,
+      "all_required_pass": false,
+      "startedAt": "2026-11-03T04:13:33.977Z",
+      "finishedAt": "2026-11-03T04:13:34.079Z",
+      "receipt": "runs/null/score.json"
+    },
+    "oracle": {
+      "passed": 8,
+      "required_total": 8,
+      "valid": true,
+      "all_required_pass": true,
+      "startedAt": "2026-11-03T04:13:59.822Z",
+      "finishedAt": "2026-11-03T04:16:30.099Z",
+      "receipt": "runs/oracle/score.json"
+    }
+  },
+  "key_usage_initial": 0,
+  "key_usage_latest": 3.169185647,
+  "metered_spend": 3.169185647,
+  "metering_as_of": "2026-11-03T05:44:00.172340+00:00",
+  "validation_summary": [
+    {
+      "task": "bad-deploy",
+      "version": "base",
+      "phase": "validation",
+      "valid_trials": 1,
+      "trials": 1,
+      "all_required_pass": 1,
+      "required_passed": 7,
+      "required_total": 7,
+      "wall_total_s": 82.94225287530571,
+      "wall_mean_s": 82.94225287530571,
+      "failed_checks": []
+    },
+    {
+      "task": "bad-deploy",
+      "version": "selected",
+      "phase": "validation",
+      "valid_trials": 1,
+      "trials": 1,
+      "all_required_pass": 1,
+      "required_passed": 7,
+      "required_total": 7,
+      "wall_total_s": 97.09046429209411,
+      "wall_mean_s": 97.09046429209411,
+      "failed_checks": []
+    },
+    {
+      "task": "bad-deploy",
+      "version": "selected",
+      "phase": "validation-opus",
+      "valid_trials": 1,
+      "trials": 1,
+      "all_required_pass": 1,
+      "required_passed": 7,
+      "required_total": 7,
+      "wall_total_s": 161.16485370788723,
+      "wall_mean_s": 161.16485370788723,
+      "failed_checks": []
+    },
+    {
+      "task": "false-alarm",
+      "version": "base",
+      "phase": "validation",
+      "valid_trials": 1,
+      "trials": 1,
+      "all_required_pass": 1,
+      "required_passed": 5,
+      "required_total": 5,
+      "wall_total_s": 80.49677108228207,
+      "wall_mean_s": 80.49677108228207,
+      "failed_checks": []
+    },
+    {
+      "task": "false-alarm",
+      "version": "selected",
+      "phase": "validation",
+      "valid_trials": 1,
+      "trials": 1,
+      "all_required_pass": 1,
+      "required_passed": 5,
+      "required_total": 5,
+      "wall_total_s": 49.02795995771885,
+      "wall_mean_s": 49.02795995771885,
+      "failed_checks": []
+    },
+    {
+      "task": "false-alarm",
+      "version": "selected",
+      "phase": "validation-opus",
+      "valid_trials": 1,
+      "trials": 1,
+      "all_required_pass": 1,
+      "required_passed": 5,
+      "required_total": 5,
+      "wall_total_s": 82.51554954238236,
+      "wall_mean_s": 82.51554954238236,
+      "failed_checks": []
+    },
+    {
+      "task": "status-request",
+      "version": "base",
+      "phase": "validation",
+      "valid_trials": 3,
+      "trials": 3,
+      "all_required_pass": 0,
+      "required_passed": 16,
+      "required_total": 24,
+      "wall_total_s": 528.3254875419661,
+      "wall_mean_s": 176.10849584732205,
+      "failed_checks": [
+        "answered_request_thread",
+        "deployed_repair",
+        "fault_recovered",
+        "healthy_monitor",
+        "incident_recovered",
+        "investigated"
+      ]
+    },
+    {
+      "task": "status-request",
+      "version": "selected",
+      "phase": "validation",
+      "valid_trials": 3,
+      "trials": 3,
+      "all_required_pass": 0,
+      "required_passed": 21,
+      "required_total": 24,
+      "wall_total_s": 661.0639987494797,
+      "wall_mean_s": 220.35466624982655,
+      "failed_checks": [
+        "answered_request_thread"
+      ]
+    },
+    {
+      "task": "status-request",
+      "version": "selected",
+      "phase": "validation-opus",
+      "valid_trials": 3,
+      "trials": 3,
+      "all_required_pass": 2,
+      "required_passed": 23,
+      "required_total": 24,
+      "wall_total_s": 750.0723071256652,
+      "wall_mean_s": 250.02410237522176,
+      "failed_checks": [
+        "investigated"
+      ]
+    }
+  ]
+}
